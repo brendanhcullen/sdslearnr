@@ -1,0 +1,34 @@
+---
+output: 
+  html_document:
+    includes:
+      in_header: resizer.html
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(tidyverse)
+knitr::opts_chunk$set(echo = FALSE, exercise.cap = "Example")
+```
+
+
+```{r example, exercise=TRUE}
+ggplot(mpg, aes(x = ___, y = ___)) +
+  geom_point(color = "#B3E5D9") +
+  geom_smooth(color = "#7EC1E7",
+              fill = "#C7E4F5") +
+  theme_minimal(15)
+```
+
+
+```{r example-solution}
+ggplot(mpg, aes(x = displ, y = cty)) +
+  geom_point(color = "#B3E5D9") +
+  geom_smooth(color = "#7EC1E7",
+              fill = "#C7E4F5") +
+  theme_minimal(15)
+```
+
+
+<div data-iframe-height></div>
